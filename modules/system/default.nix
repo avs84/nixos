@@ -15,7 +15,7 @@
   # Define flake part nixosModule "system"
   flake.nixosModules.system = {...}: let
     modules = with self.nixosModules; [
-      user
+      users
       networking
       bootloader
     ];
