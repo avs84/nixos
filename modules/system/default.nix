@@ -18,7 +18,8 @@
       users
       networking
       bootloader
-      imports
+      # imports
+      audio
     ];
   in {
     imports = modules;
@@ -41,5 +42,7 @@
       LC_TELEPHONE = "nl_NL.UTF-8";
       LC_TIME = "nl_NL.UTF-8";
     };
+
+    system.stateVersion = "26.05";
   };
 }
