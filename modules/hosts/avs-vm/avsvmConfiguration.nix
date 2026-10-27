@@ -8,6 +8,8 @@
       nvim
     ];
 
+    networking.hostName = "avs-vm"; # Define your hostname.
+
 
     import = [
       ./_hardware-configuration.nix

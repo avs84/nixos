@@ -1,4 +1,4 @@
-{...}:{
+{inputs, ...}:{
 
   perSystem = {pkgs, ...}:{
     # Add per-system configuration here
