@@ -1,6 +1,6 @@
 {self, inputs, ...}: {
 
-  flake.nixosConfigurations.avs = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.avs-vm = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules; [
       avsvmConfiguration
       system
