@@ -18,6 +18,7 @@
       users
       networking
       bootloader
+      imports
     ];
   in {
     imports = modules;
