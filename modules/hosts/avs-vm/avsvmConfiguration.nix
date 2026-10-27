@@ -5,11 +5,11 @@
     environment.systemPackages = with pkgs; [
       # Add packages here
       git
-      nvim
+      neovim
     ];
 
     networking.hostName = "avs-vm"; # Define your hostname.
-    
+
   };
 
 }
