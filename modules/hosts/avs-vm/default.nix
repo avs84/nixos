@@ -4,9 +4,8 @@
     modules = with self.nixosModules; [
       avsvmConfiguration
       system
+      neovim
     ];
-
-    
 
   };
 
