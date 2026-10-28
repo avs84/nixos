@@ -22,10 +22,11 @@
 
       # Setting nixpkgs.config.free = true isn't possible through a normal nixosModule,
       # because of how inheritance works with nixos exclusive objects
-      unfreePkgs = import inputs.nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
+      # unfreePkgs = import inputs.nixpkgs {
+      #   inherit system;
+      #   config.allowUnfree = true;
+      # };
+      inputs.nixpkgs.config.allowUnfree = true;
 
   };
   };
