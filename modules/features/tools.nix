@@ -1,4 +1,4 @@
-{ ... }:{
+{ self, ... }:{
 
   flake.nixosModules.tools = {self, pkgs, ...}:{
   # List packages installed in system profile.
