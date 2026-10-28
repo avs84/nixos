@@ -1,4 +1,4 @@
-{self, ...}: {
+{...}: {
   # This module acts as a collection of other modules, for ease
   # of use. Adding another module to this list will import it
   # for all other modules that import this one.
@@ -13,7 +13,7 @@
 	# those that would make up a basic system, as seen here.
 
   # Define flake part nixosModule "system"
-  flake.nixosModules.system = {...}: let
+  flake.nixosModules.system = {self, inputs, ...}: let
     modules = with self.nixosModules; [
       users
       networking
