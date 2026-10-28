@@ -8,7 +8,6 @@
       games
       productivity
       hyprland
-      cli
     ];
 
   };
