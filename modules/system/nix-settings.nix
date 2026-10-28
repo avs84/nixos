@@ -26,7 +26,6 @@
       #   inherit system;
       #   config.allowUnfree = true;
       # };
-      inputs.nixpkgs.config.allowUnfree = true;
 
   };
   };

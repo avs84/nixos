@@ -25,5 +25,9 @@
         user.email = "avschuijl@gmail.com";
       };
     };
+  
+    nixpkgs.config.allowUnfree = true;
+
+
   };
 }
