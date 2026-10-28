@@ -13,10 +13,13 @@
   };
 
   environment.systemPackages = with pkgs; [
+    eza
     btop
     coreutils
     zip
     tldr
   ];
+
+  
  };
 }
