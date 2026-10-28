@@ -43,6 +43,13 @@
       LC_TIME = "nl_NL.UTF-8";
     };
 
+    # Setting nixpkgs.config.free = true isn't possible through a normal nixosModule,
+    # because of how inheritance works with nixos exclusive objects
+    unfreePkgs = import inputs.nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+
     system.stateVersion = "26.05";
   };
 }
