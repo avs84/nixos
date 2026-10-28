@@ -20,7 +20,6 @@
             ".." = "cd ..";
             "..." = "cd ../..";
             ls = "eza";
-            nrs-vm = "sudo nixos-rebuild switch --flake ~/.nixos-dotfiles#avs-vm";
           };
         };
       };
