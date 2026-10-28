@@ -5,7 +5,6 @@
   fish
   ];
 
-
   programs.eza = {
     enable = true;
     enableFishIntegration = true;
@@ -19,5 +18,5 @@
     zip
     tldr
   ];
- }
- }
+ };
+}
