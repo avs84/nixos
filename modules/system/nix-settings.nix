@@ -8,6 +8,18 @@
         inherit system;
       };
 
+      # Set users that are allowed to use the flake command
+      trusted-users = [ "root" "avs" ];
+
+      #setup garbage collection and optimisation
+      gc = {
+        automatic = true;
+        dates = "weekly";
+        options = "--delete-older-than 30d";
+      };
+
+      optimise.automatic = true;
+
       # Setting nixpkgs.config.free = true isn't possible through a normal nixosModule,
       # because of how inheritance works with nixos exclusive objects
       unfreePkgs = import inputs.nixpkgs {

@@ -18,8 +18,8 @@
       users
       networking
       bootloader
-      # imports
       audio
+      fonts
     ];
   in {
     imports = modules;

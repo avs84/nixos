@@ -7,13 +7,6 @@
       # Include the results of the hardware scan.
       ./_hardware-configuration.nix
     ];
-    
-    
-    environment.systemPackages = with pkgs; [
-      # Add packages here
-      git
-      # neovim
-    ];
 
 
     networking.hostName = "avs-vm"; # Define your hostname.
@@ -23,6 +16,12 @@
       enable = true;
       settings.PermitRootLogin = "no";
       allowSFTP = true;
+    };
+
+    programs.git = {
+    settings.user = {
+      name = "Arno van Schuijlenborgh";
+      email = "avschuijl@gmail.com";
     };
   };
 

@@ -1,0 +1,23 @@
+ { ... } : {
+ 
+ flake.nixosModules.cli = { self, ...}:{
+  modules = with self.nixosModules; [
+  fish
+  ];
+
+
+  programs.eza = {
+    enable = true;
+    enableFishIntegration = true;
+    enableBashIntegration = true;
+    extraOptions = [ "-l" "--icons" "--git" "-a" ];
+  };
+
+  environment.systemPackages = with pkgs; [
+    btop
+    coreutils
+    zip
+    tldr
+  ];
+ }
+ }
