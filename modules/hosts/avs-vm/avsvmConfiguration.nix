@@ -22,7 +22,7 @@
     settings.user = {
       name = "Arno van Schuijlenborgh";
       email = "avschuijl@gmail.com";
+      };
     };
   };
-
 }
