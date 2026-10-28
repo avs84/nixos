@@ -4,7 +4,10 @@
     modules = with self.nixosModules; [
       avsvmConfiguration
       system
-      neovim
+      tools
+      games
+      productivity
+      hyprland
     ];
 
   };
