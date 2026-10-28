@@ -19,9 +19,9 @@
     };
 
     programs.git = {
-    config = {
-      user.name = "Arno van Schuijlenborgh";
-      user.email = "avschuijl@gmail.com";
+      config = {
+        user.name = "Arno van Schuijlenborgh";
+        user.email = "avschuijl@gmail.com";
       };
     };
   };
