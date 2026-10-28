@@ -1,6 +1,6 @@
  { ... } : {
  
- flake.nixosModules.cli = { self, ...}:{
+ flake.nixosModules.cli = { self, pkgs, ...}:{
   modules = with self.nixosModules; [
   fish
   ];
