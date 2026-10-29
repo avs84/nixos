@@ -44,7 +44,6 @@
 
         (map "n" "Q" "<nop>" { })
 
-        (map "n" "<leader>dg" "<cmd>DogeGenerate<CR>" { })
         (map "n" "<leader>cc" "<cmd>!php-cs-fixer fix % --using-cache=no<CR>" { })
 
         # Replace word under cursor (on line)
@@ -73,7 +72,6 @@
       extraPlugins = {
         undotree.package = pkgs.vimPlugins.undotree;
         oscyank.package = pkgs.vimPlugins.vim-oscyank;
-        doge.package = pkgs.vimPlugins.vim-doge;
       };
       };
     };
