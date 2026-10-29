@@ -8,10 +8,10 @@
       enable = true;
       # Your settings need to go into the settings attribute set
       # most settings are documented in the appendix
-      settings = {
-        vim.viAlias = false;
-        vim.vimAlias = true;
-        vim.lsp = {
+      settings.vim = {
+        viAlias = false;
+        vimAlias = true;
+        lsp = {
           enable = true;
         };
 
@@ -71,12 +71,12 @@
 
       # Plugins your keybinds depend on
       extraPlugins = {
-      undotree.package = pkgs.vimPlugins.undotree;
-      oscyank.package = pkgs.vimPlugins.vim-oscyank;
-      neogen = {
-        package = pkgs.vimPlugins.neogen;
-        setup = "require('neogen').setup {}";
-      };
+        undotree.package = pkgs.vimPlugins.undotree;
+        oscyank.package = pkgs.vimPlugins.vim-oscyank;
+        neogen = {
+          package = pkgs.vimPlugins.neogen;
+          setup = "require('neogen').setup {}";
+        };
       };
     };
   };
