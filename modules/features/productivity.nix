@@ -6,7 +6,7 @@
     environment.systemPackages = with pkgs; [
       protonmail-desktop
       capacities
-      bambu-studio
+      # bambu-studio
       onlyoffice-desktopeditors
     ];
 
