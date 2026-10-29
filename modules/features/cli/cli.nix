@@ -1,8 +1,8 @@
- { ... } : {
+ { self, ... } : {
  
- flake.nixosModules.cli = { self, pkgs, ...}:{
+ flake.nixosModules.cli = { pkgs, ...}:{
   modules = with self.nixosModules; [
-  fish
+    fish
   ];
 
   programs.eza = {

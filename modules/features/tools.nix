@@ -1,6 +1,6 @@
-{ ... }:{
+{self, ... }:{
 
-  flake.nixosModules.tools = {self, pkgs, ...}:{
+  flake.nixosModules.tools = { pkgs, ...}:{
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
     modules = with self.nixosModules; [
