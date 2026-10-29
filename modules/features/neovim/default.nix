@@ -44,6 +44,7 @@
 
         (map "n" "Q" "<nop>" { })
 
+        (map "n" "<leader>dg" "<cmd>Neogen<CR>" { })
         (map "n" "<leader>cc" "<cmd>!php-cs-fixer fix % --using-cache=no<CR>" { })
 
         # Replace word under cursor (on line)
@@ -70,8 +71,11 @@
 
       # Plugins your keybinds depend on
       extraPlugins = {
-        undotree.package = pkgs.vimPlugins.undotree;
-        oscyank.package = pkgs.vimPlugins.vim-oscyank;
+      undotree.package = pkgs.vimPlugins.undotree;
+      oscyank.package = pkgs.vimPlugins.vim-oscyank;
+      neogen = {
+        package = pkgs.vimPlugins.neogen;
+        setup = "require('neogen').setup {}";
       };
       };
     };
