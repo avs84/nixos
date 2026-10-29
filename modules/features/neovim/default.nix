@@ -1,6 +1,8 @@
-{ ... }:{
+{inputs, ... }:{
 
   flake.nixosModules.neovim = { ...}:{
+
+    imports = [inputs.nvf.nixosModules.default ];
 
     programs.nvf = {
       enable = true;
