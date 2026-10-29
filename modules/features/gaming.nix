@@ -57,21 +57,21 @@
 
     services.zerotierone.enable = true;
 
-    persistance.cache.directories = [
-      ".local/share/Hytale"
-      ".local/share/hytale-launcher"
+    # persistance.cache.directories = [
+    #   ".local/share/Hytale"
+    #   ".local/share/hytale-launcher"
 
-      ".local/share/Steam"
-      ".local/share/bottles"
-      ".local/share/PrismLauncher"
-      ".config/r2modmanPlus-local"
+    #   ".local/share/Steam"
+    #   ".local/share/bottles"
+    #   ".local/share/PrismLauncher"
+    #   ".config/r2modmanPlus-local"
 
-      ".local/share/Terraria"
+    #   ".local/share/Terraria"
 
-      "Games"
+    #   "Games"
 
-      ".config/heroic"
-    ];
+    #   ".config/heroic"
+    # ];
 
     nix.settings = {
       substituters = ["https://nix-gaming.cachix.org"];
