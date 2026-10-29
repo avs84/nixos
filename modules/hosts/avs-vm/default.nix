@@ -5,7 +5,7 @@
       avsvmConfiguration
       system
       tools
-      gaming
+      # gaming
       productivity
       hyprland
       cli
