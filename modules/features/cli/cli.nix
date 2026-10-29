@@ -1,25 +1,20 @@
- { self, ... } : {
- 
- flake.nixosModules.cli = { pkgs, ...}:{
-  
-  # modules = with self.nixosModules; [
-  #   fish
-  # ];
+{ self, ... }: {
+  flake.nixosModules.cli = { pkgs, ... }: {
 
-  environment.systemPackages = with pkgs; [
-    eza
-    btop
-    coreutils
-    zip
-    tldr
-  ];
+    environment.systemPackages = with pkgs; [
+      eza
+      btop
+      coreutils
+      zip
+      tldr
+    ];
 
-  programs.eza = {
-    enable = true;
-    enableFishIntegration = true;
-    enableBashIntegration = true;
-    extraOptions = [ "-l" "--icons" "--git" "-a" ];
+    # Applies to bash and fish
+    environment.shellAliases = {
+      ls = "eza -la --icons --git";
+      ll = "eza -l --icons --git";
+      la = "eza -la --icons --git";
+      tree = "eza --tree --icons";
+    };
   };
-  
- };
 }
