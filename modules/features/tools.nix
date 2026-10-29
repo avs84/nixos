@@ -6,6 +6,7 @@
     modules = with self.nixosModules; [
       # Add your modules here
       neovim
+      fish
     ];
     
     environment.systemPackages = with pkgs; [

@@ -1,9 +1,10 @@
  { self, ... } : {
  
  flake.nixosModules.cli = { pkgs, ...}:{
-  modules = with self.nixosModules; [
-    fish
-  ];
+  
+  # modules = with self.nixosModules; [
+  #   fish
+  # ];
 
   programs.eza = {
     enable = true;
