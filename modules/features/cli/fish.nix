@@ -1,6 +1,6 @@
 { ... } : {
 
-  flake.nixosModules.fish = {.pkgs, ...}: {
+  flake.nixosModules.fish = {pkgs, ...}: {
     
     environment.systemPackages = with pkgs; [
       fishPlugins.done
