@@ -6,13 +6,6 @@
   #   fish
   # ];
 
-  programs.eza = {
-    enable = true;
-    enableFishIntegration = true;
-    enableBashIntegration = true;
-    extraOptions = [ "-l" "--icons" "--git" "-a" ];
-  };
-
   environment.systemPackages = with pkgs; [
     eza
     btop
@@ -21,6 +14,12 @@
     tldr
   ];
 
+  programs.eza = {
+    enable = true;
+    enableFishIntegration = true;
+    enableBashIntegration = true;
+    extraOptions = [ "-l" "--icons" "--git" "-a" ];
+  };
   
  };
 }
