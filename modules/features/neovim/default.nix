@@ -1,6 +1,6 @@
 {inputs, ... }:{
 
-  flake.nixosModules.neovim = { ...}:{
+  flake.nixosModules.neovim = { pkgs, ...}:{
 
     imports = [inputs.nvf.nixosModules.default ];
 
