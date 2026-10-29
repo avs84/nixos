@@ -1,6 +1,6 @@
 { ... } : {
 
-  flake.nixosModules.fish = { config, lib, pkgs, ...}: {
+  flake.nixosModules.fish = {...}: {
         
     programs.fish = {
       enable = true;
