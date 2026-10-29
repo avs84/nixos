@@ -8,6 +8,8 @@
       games
       productivity
       hyprland
+      cli
+      fish
     ];
 
   };
