@@ -18,6 +18,12 @@
 
     #Neovim modular setup
     nvf.url = "github:notashelf/nvf";
+
+    #noctalia greeter
+    inputs.noctalia-greeter = {
+      url = "github:noctalia-dev/noctalia-greeter";
+      inputs.nixpkgs.follows = "nixpkgs";
+};
   };
 
   # Default import-tree output
