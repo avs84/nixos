@@ -9,6 +9,8 @@
     environment.systemPackages = [
       pkgs.noctalia-greeter
       ];
+    
+    systemd.user.services.niri.enableDefaultPath = false;
   };
 
   perSystem = { pkgs, lib, self', ... }:
