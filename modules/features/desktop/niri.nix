@@ -44,7 +44,7 @@
       inherit pkgs;
 
       settings = {
-        spawn-at-startup = [ dms ];
+        spawn-at-startup = [ self.nixosModules.dms ];
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
