@@ -17,7 +17,7 @@
 
       globals.mapleader = " ";
 
-      vim.keymaps = [
+      keymaps = [
         {
           key = "<leader>cd";
           mode = ["n"];
