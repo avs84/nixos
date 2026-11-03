@@ -20,7 +20,7 @@
     nvf.url = "github:notashelf/nvf";
 
     #noctalia greeter
-    inputs.noctalia-greeter = {
+    noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
 };
