@@ -29,23 +29,18 @@
     
     services.displayManager.sessionPackages = [ niriQuiet ];
 
-    environment.systemPackages = [
-      pkgs.noctalia-greeter
-      ];
-  
-
     services.displayManager.noctalia-greeter = {
-        enable = true;
-        settings = {
-          #cursor.size = 24;
-          keyboard.layout = "us";
-          cursor = {
-            theme = "Bibata-Modern-Ice";
-            size = 24;
-            path = pkgs.bibata-cursors;
-          };
+      enable = true;
+      settings = {
+        #cursor.size = 24;
+        keyboard.layout = "us";
+        cursor = {
+          theme = "Bibata-Modern-Ice";
+          size = 24;
+          path = "${pkgs.bibata-cursors}/share/icons"; 
         };
       };
+    };
 
       # NixOS otherwise injects a stripped PATH via Environment= on the niri.service
       # unit which shadows the imported user-manager PATH. Disabling the default
@@ -87,7 +82,6 @@
           ELECTRON_OZONE_PLATFORM_HINT = "auto";
           XDG_SESSION_TYPE = "wayland";
           XDG_CURRENT_DESKTOP = "niri";
-          DISPLAY = ":0";
         };
 
       };
