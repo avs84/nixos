@@ -99,10 +99,10 @@
           "Mod+Ctrl+J".set-window-height = "-5%";
           "Mod+Ctrl+K".set-window-height = "+5%";
 
-          "Mod+WheelScrollDown".focus-column-left = null;
-          "Mod+WheelScrollUp".focus-column-right = null;
-          "Mod+Ctrl+WheelScrollDown".focus-workspace-down = null;
-          "Mod+Ctrl+WheelScrollUp".focus-workspace-up = null;
+          # "Mod+WheelScrollDown".focus-column-left = null;
+          # "Mod+WheelScrollUp".focus-column-right = null;
+          # "Mod+Ctrl+WheelScrollDown".focus-workspace-down = null;
+          # "Mod+Ctrl+WheelScrollUp".focus-workspace-up = null;
 
           "Mod+Ctrl+S".spawn-sh = ''${lib.getExe config.pkgs.grim} -l 0 - | ${config.pkgs.wl-clipboard}/bin/wl-copy'';
 
