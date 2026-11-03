@@ -9,13 +9,7 @@
     programs.niri = {
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
-    };
-
-    programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
-    programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
-    services.swayidle.enable = true; # idle management daemon
-    services.polkit-gnome.enable = true; # polkit
-    
+    };    
 
     environment.systemPackages = [
       pkgs.noctalia-greeter
