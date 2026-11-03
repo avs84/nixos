@@ -1,10 +1,6 @@
 { inputs, ... } :{
 
   flake.nixosModules.services = {pkgs, ...}:{
-    
-    imports =[
-      inputs.noctalia-greeter.nixosModules.default
-    ];
 
     services = {
       flatpak.enable = true;
