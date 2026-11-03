@@ -1,4 +1,4 @@
-{ ... }: {    
+{ self,... }: {    
 
   flake.nixosModules.dms = { self, pkgs, ... }: {
     programs.dms-shell = {
