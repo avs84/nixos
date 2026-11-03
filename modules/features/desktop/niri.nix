@@ -56,6 +56,8 @@
           "Mod+S".spawn-sh = "${noctalia} ipc call launcher toggle";
         };
       };
+
+      prefer-no-csd = true;
     };
   };
 }
