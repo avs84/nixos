@@ -19,13 +19,14 @@
     services.displayManager.noctalia-greeter = {
         enable = true;
         settings = {
-          cursor.size = 24;
+          #cursor.size = 24;
           keyboard.layout = "us";
+          cursor = {
+            theme = "Bibata-Modern-Ice";
+            size = 24;
+            path = pkgs.bibata-cursors;
+          };
         };
-        # cursorTheme = {
-        #   package = pkgs.bibata-cursors;
-        #   name = "Bibata-Modern-Ice";
-        # };
       };
 
       # NixOS otherwise injects a stripped PATH via Environment= on the niri.service
