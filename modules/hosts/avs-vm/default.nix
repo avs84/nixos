@@ -4,6 +4,7 @@
     modules = with self.nixosModules; [
       avsvmConfiguration
       system
+      desktop
       tools
       # gaming
       productivity
