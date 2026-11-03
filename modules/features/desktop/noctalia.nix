@@ -1,16 +1,4 @@
-{ self, inputs, ... }: {
-
-  flake.nixosModules.noctalia = { pkgs, ... }: {
-    programs.noctalia = {
-      enable = true;
-      systemd.enable = true;
-      package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia;
-    };
-
-    environment.systemPackages = [
-      pkgs.noctalia-greeter
-      ];
-  };
+{ self, inputs, ... }: {    
 
   perSystem = { pkgs, ... }: {
     packages.myNoctalia = inputs.wrappers.wrappers.noctalia-shell.wrap {
