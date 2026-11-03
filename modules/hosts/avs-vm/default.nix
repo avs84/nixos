@@ -10,9 +10,6 @@
       # gaming
       productivity
       hyprland
-      # cli
-      # fish
-      # neovim
     ];
 
   };
