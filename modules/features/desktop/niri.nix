@@ -1,6 +1,22 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.niri = { pkgs, config,... }: {
+  flake.nixosModules.niri = { pkgs, config,... }: let
+    # Same as the normal niri session, but sends niri-session's output to the
+    # journal (hides the "import-environment without variable names" warning)
+    niriQuiet = pkgs.runCommand "niri-quiet-session" {
+        passthru.providedSessions = [ "niri-quiet" ];
+      } ''
+        mkdir -p $out/share/wayland-sessions
+        cat > $out/share/wayland-sessions/niri-quiet.desktop <<EOF
+        [Desktop Entry]
+        Name=Niri-quiet
+        Comment=Niri with session output sent to the journal
+        Exec=${pkgs.systemd}/bin/systemd-cat -t niri-session ${config.programs.niri.package}/bin/niri-session
+        Type=Application
+        DesktopNames=niri
+        EOF
+      '';
+  in {
     
     imports =[
       inputs.noctalia-greeter.nixosModules.default
@@ -10,6 +26,8 @@
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };    
+    
+    services.displayManager.sessionPackages = [ niriQuiet ];
 
     environment.systemPackages = [
       pkgs.noctalia-greeter
@@ -67,7 +85,6 @@
           QT_QPA_PLATFORM = "wayland";
           QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
           ELECTRON_OZONE_PLATFORM_HINT = "auto";
-
           XDG_SESSION_TYPE = "wayland";
           XDG_CURRENT_DESKTOP = "niri";
           DISPLAY = ":0";
