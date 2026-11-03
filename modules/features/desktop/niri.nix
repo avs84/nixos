@@ -9,8 +9,6 @@
     environment.systemPackages = [
       pkgs.noctalia-greeter
       ];
-    };
-
   };
 
   perSystem = { pkgs, lib, self', ... }:
