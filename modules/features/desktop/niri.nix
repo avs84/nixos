@@ -1,18 +1,21 @@
 { self, inputs, ... }: {
-  flake.nixosModules.niri = { pkgs, lib, ... }: {
+
+  flake.nixosModules.niri = { pkgs, ... }: {
     programs.niri = {
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
   };
 
-  perSystem = { pkgs, lib, self', ... }: {
+  perSystem = { pkgs, lib, self', ... }:
+  let
+    noctalia = lib.getExe self'.packages.myNoctalia;
+  in {
     packages.myNiri = inputs.wrappers.wrappers.niri.wrap {
-      inherit pkgs; # THIS PART IS VERY IMPORTAINT, I FORGOT IT IN THE VIDEO!!!
+      inherit pkgs;
+
       settings = {
-        spawn-at-startup = [
-          (lib.getExe self'.packages.myNoctalia)
-        ];
+        spawn-at-startup = [ noctalia ];
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
@@ -22,8 +25,8 @@
 
         binds = {
           "Mod+Return".spawn-sh = lib.getExe pkgs.alacritty;
-          "Mod+Q".close-window = null;
-          "Mod+S".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
+          "Mod+Q".close-window = true;
+          "Mod+S".spawn-sh = "${noctalia} ipc call launcher toggle";
         };
       };
     };
