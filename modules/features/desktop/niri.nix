@@ -24,7 +24,7 @@
         layout.gaps = 5;
 
         binds = {
-          "Mod+Return".spawn-sh = lib.getExe pkgs.alacritty;
+          "Mod+T".spawn-sh = lib.getExe pkgs.alacritty;
           "Mod+Q".close-window = _: { };
           "Mod+S".spawn-sh = "${noctalia} ipc call launcher toggle";
         };
