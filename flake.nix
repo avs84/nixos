@@ -23,6 +23,12 @@
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
+
+    #DUX shell
+    dms = {
+      url = "github:duxlabs-dev/dux-shell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 };
   };
 

@@ -4,6 +4,7 @@
     
     imports =[
       inputs.noctalia-greeter.nixosModules.default
+      self.nixosModules.dms
     ];
     
     programs.niri = {
@@ -43,7 +44,7 @@
       inherit pkgs;
 
       settings = {
-        spawn-at-startup = [ noctalia ];
+        spawn-at-startup = [ dms ];
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
