@@ -1,6 +1,6 @@
-{ self, inputs, ... }: {    
+{ ... }: {    
 
-  flake.nixosModules.dms = { pkgs, ... }: {
+  flake.nixosModules.dms = { self, pkgs, ... }: {
     programs.dms-shell = {
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.default;
