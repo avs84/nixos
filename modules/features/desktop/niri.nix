@@ -6,16 +6,16 @@
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
 
-    services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${config.programs.niri.package}/bin/niri-session";
-        user = "avs";
-      };
-    };
+    # services.greetd = {
+    # enable = true;
+    # settings = {
+    #   default_session = {
+    #     command = "${config.programs.niri.package}/bin/niri-session";
+    #     user = "avs";
+    #   };
+    # };
 
-    };
+    # };
 
   };
 
@@ -27,6 +27,7 @@
       inherit pkgs;
 
       settings = {
+        outputs."eDP-1".scale = 2.0;
         spawn-at-startup = [ noctalia ];
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
