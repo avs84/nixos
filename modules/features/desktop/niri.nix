@@ -6,9 +6,6 @@
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
 
-    environment.systemPackages = [
-      pkgs.noctalia-greeter
-      ];
   };
 
   perSystem = { pkgs, lib, self', ... }:
