@@ -99,8 +99,8 @@
           "Mod+Ctrl+J".set-window-height = "-5%";
           "Mod+Ctrl+K".set-window-height = "+5%";
 
-          "Mod+WheelScrollDown cooldown-ms=150" = "focus-workspace-down";
-          "Mod+WheelScrollUp   cooldown-ms=150" = "focus-workspace-up";
+          "Mod+WheelScrollDown" = "focus-workspace-down";
+          "Mod+WheelScrollUp" = "focus-workspace-up";
           "Mod+WheelScrollRight               " = "focus-column-right";
           "Mod+WheelScrollLeft                " = "focus-column-left";
 
