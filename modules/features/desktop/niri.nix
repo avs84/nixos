@@ -16,7 +16,7 @@
       ];
     
 
-    displayManager.noctalia-greeter = {
+    services.displayManager.noctalia-greeter = {
         enable = true;
         settings = {
           cursor.size = 24;
@@ -27,7 +27,7 @@
         #   name = "Bibata-Modern-Ice";
         # };
       };
-      
+
       # NixOS otherwise injects a stripped PATH via Environment= on the niri.service
       # unit which shadows the imported user-manager PATH. Disabling the default
       # lets niri inherit the full PATH set up by niri-session
