@@ -55,9 +55,11 @@
           "Mod+Q".close-window = _: { };
           "Mod+S".spawn-sh = "${noctalia} ipc call launcher toggle";
         };
+
+        prefer-no-csd = true;
+
       };
 
-      prefer-no-csd = true;
     };
   };
 }
