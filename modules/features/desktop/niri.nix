@@ -19,7 +19,7 @@
       inherit pkgs;
 
       settings = {
-        outputs."eDP-1".scale = 2.0;
+        outputs."eDP-1".scale = 1.9;
         spawn-at-startup = [ noctalia ];
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;

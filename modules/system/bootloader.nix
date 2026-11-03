@@ -2,13 +2,12 @@
   # Define flake part nixosModule "bootloader" and pass in pkgs
   flake.nixosModules.bootloader = {pkgs, ...}: {
     
+    kernelPackages = pkgs.linuxPackages_latest;
+
     # Use the GRUB 2 boot loader.
     boot.loader.grub.enable = true;
     boot.loader.grub.device = "/dev/vda";
     boot.loader.grub.useOSProber = true;
-    
-    
-    
     
     
     # # Normal nix code

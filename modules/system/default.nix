@@ -20,6 +20,7 @@
       bootloader
       audio
       fonts
+      services
     ];
   in {
     imports = modules;
