@@ -6,14 +6,19 @@
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
 
-     services.greetd = {
-      enable = true;
-      settings = {
-        default_session = {
-          command = "${config.programs.niri.package}/bin/niri-session";
-          user = "avs";
-        };
+    services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${config.programs.niri.package}/bin/niri-session";
+        user = "avs";
       };
+    };
+    # NixOS otherwise injects a stripped PATH via Environment= on the niri.service
+    # unit which shadows the imported user-manager PATH. Disabling the default
+    # lets niri inherit the full PATH set up by niri-session.
+    systemd.user.services.niri.enableDefaultPath = false;
+
 };
 
 # NixOS otherwise injects a stripped PATH via Environment= on the niri.service
