@@ -6,15 +6,9 @@
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
 
-    services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${config.programs.niri.package}/bin/niri-session";
-        # user = "avs";
-      };
-    };
-
+    environment.systemPackages = [
+      pkgs.noctalia-greeter
+      ];
     };
 
   };
