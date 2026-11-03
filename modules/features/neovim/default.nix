@@ -17,58 +17,174 @@
 
       globals.mapleader = " ";
 
-      keymaps = [
-        (map "n" "<leader>cd" "<cmd>Ex<CR>" { })
+      vim.keymaps = [
+        {
+          key = "<leader>cd";
+          mode = ["n"];
+          action = "<cmd>Ex<CR>";
+          desc = "File explorer";
+        }
 
         # Move selected lines up/down
-        (map "v" "J" ":m '>+1<CR>gv=gv" { })
-        (map "v" "K" ":m '<-2<CR>gv=gv" { })
+        {
+          key = "J";
+          mode = ["v"];
+          action = ":m '>+1<CR>gv=gv";
+        }
+        {
+          key = "K";
+          mode = ["v"];
+          action = ":m '<-2<CR>gv=gv";
+        }
 
-        (map "n" "J" "mzJ`z" { })
-        (map "n" "<C-d>" "<C-d>zz" { })
-        (map "n" "<C-u>" "<C-u>zz" { })
-        (map "n" "n" "nzzzv" { })
-        (map "n" "N" "Nzzzv" { })
+        {
+          key = "J";
+          mode = ["n"];
+          action = "mzJ`z";
+          desc = "Join lines, keep cursor";
+        }
+        {
+          key = "<C-d>";
+          mode = ["n"];
+          action = "<C-d>zz";
+        }
+        {
+          key = "<C-u>";
+          mode = ["n"];
+          action = "<C-u>zz";
+        }
+        {
+          key = "n";
+          mode = ["n"];
+          action = "nzzzv";
+        }
+        {
+          key = "N";
+          mode = ["n"];
+          action = "Nzzzv";
+        }
 
         # Paste/delete without clobbering the clipboard
-        (map "x" "<leader>p" ''"_dP'' { })
-        (map [ "n" "v" ] "<leader>d" ''"_d'' { })
+        {
+          key = "<leader>p";
+          mode = ["x"];
+          action = ''"_dP'';
+          desc = "Paste without overwriting register";
+        }
+        {
+          key = "<leader>d";
+          mode = ["n" "v"];
+          action = ''"_d'';
+          desc = "Delete without overwriting register";
+        }
 
-        (map "i" "<C-c>" "<Esc>" { })
+        {
+          key = "<C-c>";
+          mode = ["i"];
+          action = "<Esc>";
+        }
 
         # Quickfix / location list navigation
-        (map "n" "<C-j>" "<cmd>cnext<CR>zz" { })
-        (map "n" "<C-k>" "<cmd>cprev<CR>zz" { })
-        (map "n" "<leader>k" "<cmd>lnext<CR>zz" { })
-        (map "n" "<leader>j" "<cmd>lprev<CR>zz" { })
+        {
+          key = "<C-j>";
+          mode = ["n"];
+          action = "<cmd>cnext<CR>zz";
+        }
+        {
+          key = "<C-k>";
+          mode = ["n"];
+          action = "<cmd>cprev<CR>zz";
+        }
+        {
+          key = "<leader>k";
+          mode = ["n"];
+          action = "<cmd>lnext<CR>zz";
+        }
+        {
+          key = "<leader>j";
+          mode = ["n"];
+          action = "<cmd>lprev<CR>zz";
+        }
 
-        (map "n" "Q" "<nop>" { })
+        {
+          key = "Q";
+          mode = ["n"];
+          action = "<nop>";
+        }
 
-        (map "n" "<leader>dg" "<cmd>Neogen<CR>" { })
-        (map "n" "<leader>cc" "<cmd>!php-cs-fixer fix % --using-cache=no<CR>" { })
+        {
+          key = "<leader>dg";
+          mode = ["n"];
+          action = "<cmd>Neogen<CR>";
+          desc = "Generate doc comment";
+        }
+        {
+          key = "<leader>cc";
+          mode = ["n"];
+          action = "<cmd>!php-cs-fixer fix % --using-cache=no<CR>";
+          desc = "Format PHP file";
+        }
 
         # Replace word under cursor (on line)
-        (map "n" "<leader>s" ''
-          :s/\<<C-r><C-w>\>//gI<Left><Left><Left>'' { })
+        {
+          key = "<leader>s";
+          mode = ["n"];
+          action = '':s/\<<C-r><C-w>\>//gI<Left><Left><Left>'';
+          desc = "Replace word under cursor";
+        }
 
-        (map "n" "<leader>x" "<cmd>!chmod +x %<CR>" { silent = true; })
+        {
+          key = "<leader>x";
+          mode = ["n"];
+          action = "<cmd>!chmod +x %<CR>";
+          silent = true;
+          desc = "Make file executable";
+        }
 
-        # OSC52 yank (needs remap, since these are <Plug> mappings)
-        (map "n" "<leader>y" "<Plug>OSCYankOperator" { noremap = false; })
-        (map "v" "<leader>y" "<Plug>OSCYankVisual" { noremap = false; })
-
-        (map "n" "<leader>u" "<cmd>UndotreeToggle<CR>" { })
+        {
+          key = "<leader>u";
+          mode = ["n"];
+          action = "<cmd>UndotreeToggle<CR>";
+          desc = "Toggle undotree";
+        }
 
         # Quickfix list
-        (map "n" "<leader>cl" ":cclose<CR>" { silent = true; })
-        (map "n" "<leader>co" ":copen<CR>" { silent = true; })
-        (map "n" "<leader>cn" ":cnext<CR>zz" { })
-        (map "n" "<leader>cp" ":cprev<CR>zz" { })
-        (map "n" "<leader>li" ":checkhealth vim.lsp<CR>" { desc = "LSP Info"; })
+        {
+          key = "<leader>cl";
+          mode = ["n"];
+          action = ":cclose<CR>";
+          silent = true;
+        }
+        {
+          key = "<leader>co";
+          mode = ["n"];
+          action = ":copen<CR>";
+          silent = true;
+        }
+        {
+          key = "<leader>cn";
+          mode = ["n"];
+          action = ":cnext<CR>zz";
+        }
+        {
+          key = "<leader>cp";
+          mode = ["n"];
+          action = ":cprev<CR>zz";
+        }
+        {
+          key = "<leader>li";
+          mode = ["n"];
+          action = ":checkhealth vim.lsp<CR>";
+          desc = "LSP Info";
+        }
 
-        (map "n" "<leader><leader>" "<cmd>so<CR>" { })
+        {
+          key = "<leader><leader>";
+          mode = ["n"];
+          action = "<cmd>so<CR>";
+          desc = "Source file";
+        }
       ];
-
       # Plugins your keybinds depend on
       extraPlugins = {
         undotree.package = pkgs.vimPlugins.undotree;
