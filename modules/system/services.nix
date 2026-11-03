@@ -6,8 +6,14 @@
         flatpak.enable = true;
         printing.enable = true;
 
-        displayManager.sddm.enable = true;
-        displayManager.sddm.wayland.enable = true;
+        services.greetd = {
+        enable = true;
+        settings = {
+          default_session = {
+            command = "${pkgs.tuigreet}/bin/tuigreet --cmd niri-session";
+            user = "avs";
+          };
+
       };
 
   };
