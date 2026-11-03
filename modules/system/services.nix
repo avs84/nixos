@@ -6,15 +6,27 @@
       flatpak.enable = true;
       printing.enable = true;
 
-      greetd = {
+      displayManager.noctalia-greeter = {
         enable = true;
         settings = {
-          default_session = {
-            command = "${pkgs.tuigreet}/bin/tuigreet --cmd niri-session";
-            user = "avs";
-          };
+          cursor.size = 24;
+          keyboard.layout = "us";
+        };
+        cursorTheme = {
+          package = pkgs.bibata-cursors;
+          name = "Bibata-Modern-Ice";
         };
       };
+
+      # greetd = {
+      #   enable = true;
+      #   settings = {
+      #     default_session = {
+      #       command = "${pkgs.tuigreet}/bin/tuigreet --cmd niri-session";
+      #       user = "avs";
+      #     };
+      #   };
+      # };
     };
   };
 }
