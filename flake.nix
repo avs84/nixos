@@ -14,6 +14,7 @@
 
     #Nix Wrapper Modules
     wrappers.url = "github:nix-community/nix-wrapper-modules";
+    # wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
     #Neovim modular setup
     nvf.url = "github:notashelf/nvf";

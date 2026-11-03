@@ -1,7 +1,7 @@
 {inputs, ...}: {
   perSystem = {pkgs, ...}: {
     packages = {
-      noctalia-shell = inputs.wrapper-modules.wrappers.noctalia-shell.wrap {
+      noctalia-shell = inputs.wrappers.wrappers.noctalia-shell.wrap {
         inherit pkgs;
         package = pkgs.noctalia-shell.overrideAttrs {
           name = "vjnoctalia2";
