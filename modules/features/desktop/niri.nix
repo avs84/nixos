@@ -16,8 +16,6 @@
       ];
   };
 
-  };
-
   perSystem = { pkgs, lib, self', ... }:
   let
     noctalia = lib.getExe self'.packages.myNoctalia;
