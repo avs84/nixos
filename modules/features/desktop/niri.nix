@@ -11,7 +11,7 @@
   }: {
     options.terminal = lib.mkOption {
       type = lib.types.str;
-      default = "kitty";
+      default = "alacritty";
     };
     config = {
       settings = let
