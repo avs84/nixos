@@ -25,17 +25,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #DUX shell
-    dms = {
-      url = "github:duxlabs-dev/dux-shell/stable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    #Niri
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   # Default import-tree output
