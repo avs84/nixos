@@ -5,7 +5,7 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
     modules = with self.nixosModules; [
       # Add your modules here
-      neovim
+      myNeovim
       fish
       cli
     ];
