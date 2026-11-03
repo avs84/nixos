@@ -250,7 +250,7 @@
             allowPanelsOnScreenWithoutBar = true;
             animationDisabled = false;
             animationSpeed = 1;
-            avatarImage = ../../nixos/features/wallpaper/gruvbox-mountain-village.png;
+            # avatarImage = ../../nixos/features/wallpaper/gruvbox-mountain-village.png;
             boxRadiusRatio = 1;
             compactLockScreen = false;
             dimmerOpacity = 0.15;
@@ -338,7 +338,7 @@
             audioCodec = "opus";
             audioSource = "default_output";
             colorRange = "limited";
-            directory = "/home/yurii/Videos";
+            directory = "/home/avs/Videos";
             frameRate = 60;
             quality = "very_high";
             showCursor = true;
