@@ -9,7 +9,7 @@
     programs.niri.package = selfpkgs.niri;
 
     # preferences.autostart = [selfpkgs.quickshellWrapped];
-    preferences.autostart = [selfpkgs.noctalia-shell];
+    # preferences.autostart = [selfpkgs.noctalia-shell];
 
     environment.systemPackages = [
       selfpkgs.noctalia-shell
