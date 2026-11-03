@@ -158,10 +158,10 @@
         layout = {
           gaps = 5;
 
-          focus-ring = {
-            width = 2;
-            active-color = "#${self.themeNoHash.base09}";
-          };
+          # focus-ring = {
+          #   width = 2;
+          #   active-color = "#${self.themeNoHash.base09}";
+          # };
         };
 
         workspaces = let
