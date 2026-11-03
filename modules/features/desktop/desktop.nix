@@ -12,7 +12,7 @@
     # preferences.autostart = [selfpkgs.noctalia-shell];
 
     environment.systemPackages = [
-      selfpkgs.noctalia-shell
+      selfpkgs.myNoctalia
     ];
 
 
