@@ -1,9 +1,14 @@
-{ self,... }: {    
+{ self, inputs, ... }: {    
 
   flake.nixosModules.dms = { pkgs, ... }: {
-    programs.dms-shell = {
+
+    imports = [
+      inputs.dms.nixosModules.dank-material-shell
+    ];
+
+    programs.dank-material-shell = {
       enable = true;
-      package = self.packages.${pkgs.stdenv.hostPlatform.system}.default;
+      # package = self.packages.${pkgs.stdenv.hostPlatform.system}.default;
     
       systemd = {
         enable = true;             # Systemd service for auto-start
