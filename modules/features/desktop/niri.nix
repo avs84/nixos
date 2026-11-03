@@ -6,11 +6,6 @@
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
 
-    programs.noctalia = {
-      enable = true;
-      systemd.enable = true;
-    };
-
     environment.systemPackages = [
       pkgs.noctalia-greeter
       ];
