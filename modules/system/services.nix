@@ -4,7 +4,7 @@
     
     imports =[
       inputs.noctalia-greeter.nixosModules.default
-    ]
+    ];
 
     services = {
       flatpak.enable = true;
