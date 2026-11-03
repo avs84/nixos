@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.niri = { pkgs, ... }: {
+  flake.nixosModules.niri = { pkgs, config,... }: {
     programs.niri = {
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
