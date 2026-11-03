@@ -1,15 +1,17 @@
 {self, ... }:{
 
-  flake.nixosModules.tools = { pkgs, ...}:{
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
-    modules = with self.nixosModules; [
+  flake.nixosModules.tools = { pkgs, ...}:let
+
+     modules = with self.nixosModules; [
       # Add your modules here
       myNeovim
       fish
       cli
     ];
-    
+  in {} {
+    imports = modules;
+  # List packages installed in system profile.
+  # You can use https://search.nixos.org/ to find more packages (and options).
     environment.systemPackages = with pkgs; [
       alacritty
       foot
