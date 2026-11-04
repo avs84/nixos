@@ -33,8 +33,6 @@
       er-patcher
       bottles
 
-      steamtinkerlaunch
-
     ];
 
     nix.settings = {

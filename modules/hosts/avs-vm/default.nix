@@ -6,7 +6,7 @@
       system
       niri
       flatpaks
-      gaming
+      # gaming
       # desktop
       tools
       productivity
