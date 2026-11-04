@@ -1,6 +1,6 @@
 {inputs, ...}:{
 
-  flake.NixosModules.battlenet-umu = {pkgs, ...}:
+  flake.nixosModules.battlenet-umu = {pkgs, ...}:
   
     let
       wow = "Program Files (x86)/World of Warcraft";
