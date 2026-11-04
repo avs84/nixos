@@ -4,11 +4,11 @@ flake.nixosModules.geforcenow = { pkgs, ...}:{
 
     imports = [inputs.nix-flatpak.nixosModules.nix-flatpak];
 
-    services.flatpak = {
-     
-     
+    services.flatpak = {   
       packages = [
-       { appId = "com.nvidia.geforcenow"; origin = "nvidia-geforcenow"; }        ];
+        {appId = "org.freedesktop.Platform/x86_64/24.08"; origin = "flathub";}
+        { appId = "com.nvidia.geforcenow"; origin = "nvidia-geforcenow"; }  
+      ];
     };
 
   };
