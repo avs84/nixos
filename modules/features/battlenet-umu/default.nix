@@ -2,6 +2,7 @@
 
   flake.nixosModules.battlenet-umu = {pkgs, ...}:
   {};
+
   perSystem = {pkgs, ...}: {
     packages.wow-launcher = pkgs.writeShellApplication {
       name = "wow-launcher";
@@ -55,5 +56,4 @@
       '';
     };
   };
-};
 }
