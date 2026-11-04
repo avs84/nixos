@@ -7,12 +7,11 @@
      modules = with self.nixosModules; [
       # Add your modules here
       steam
+      geforcenow
     ];
   in {
-    imports = [modules
-      inputs.nix-flatpak.nixosModules.nix-flatpak
-    ];
-    
+    imports = modules; 
+
     hardware.graphics.enable = lib.mkDefault true;
 
     programs = {
@@ -44,11 +43,6 @@
     ];
 
     services.zerotierone.enable = true;
-
-    services.flatpak.packages = [
-          { appId = "com.nvidia.geforcenow"; origin = "nvidia-geforcenow"; }
-          
-          ];
     
     nix.settings = {
       substituters = ["https://nix-gaming.cachix.org"];
