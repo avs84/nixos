@@ -1,4 +1,4 @@
-{...}:{
+{inputs, ...}:{
 
   flake.NixosModules.battlenet-umu = {pkgs, ...}:
   
