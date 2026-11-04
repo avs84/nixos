@@ -7,7 +7,6 @@
      modules = with self.nixosModules; [
       # Add your modules here
       steam
-      # battlenet-umu 
     ];
   in {
     imports = modules; 
