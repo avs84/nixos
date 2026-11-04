@@ -6,9 +6,7 @@
   }: let
      modules = with self.nixosModules; [
       # Add your modules here
-      myNeovim
-      fish
-      cli
+      steam
     ];
   in {
     imports = modules;
@@ -23,10 +21,9 @@
     environment.systemPackages = with pkgs; [
       lutris
       dxvk
-      # parsec-bin
 
       gamescope
-
+      protonup-qt
       mangohud
 
       r2modman
@@ -46,22 +43,10 @@
 
     services.zerotierone.enable = true;
 
-    # persistance.cache.directories = [
-    #   ".local/share/Hytale"
-    #   ".local/share/hytale-launcher"
-
-    #   ".local/share/Steam"
-    #   ".local/share/bottles"
-    #   ".local/share/PrismLauncher"
-    #   ".config/r2modmanPlus-local"
-
-    #   ".local/share/Terraria"
-
-    #   "Games"
-
-    #   ".config/heroic"
-    # ];
-
+    services.flatpak.packages = [
+      "com.nvidia.geforcenow"
+    ];
+`
     nix.settings = {
       substituters = ["https://nix-gaming.cachix.org"];
       trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];

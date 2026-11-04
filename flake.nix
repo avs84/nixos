@@ -25,6 +25,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    #Nix flatpak
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   # Default import-tree output
