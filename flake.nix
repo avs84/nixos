@@ -28,10 +28,6 @@
     #Nix flatpak
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
-    #Battlenet UMU
-    battlenet-umu = {
-      url = "github:jacobjdowning/battlenet-umu";
-    };
   };
 
   # Default import-tree output
