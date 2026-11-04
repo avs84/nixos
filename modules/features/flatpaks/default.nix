@@ -20,7 +20,6 @@ flake.nixosModules.flatpaks = { pkgs, ...}:{
         packages = [
           { appId = "com.nvidia.geforcenow"; origin = "nvidia-geforcenow"; }        ];
       };
-
+    };
   };
-
 }
