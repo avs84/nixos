@@ -15,7 +15,6 @@
           name = "nvidia-geforcenow";
           location = "https://international.download.nvidia.com/GFNLinux/flatpak/geforcenow.flatpakrepo";
         };
-        };
       };
       printing.enable = true;
 
