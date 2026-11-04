@@ -7,7 +7,7 @@
      modules = with self.nixosModules; [
       # Add your modules here
       steam
-      battlenet-umu
+      battlenet-umu 
     ];
   in {
     imports = modules; 
@@ -41,7 +41,7 @@
       lsfg-vk-ui
       self.packages.${pkgs.system}.wow-launcher
     ];
-        
+
     nix.settings = {
       substituters = ["https://nix-gaming.cachix.org"];
       trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];
