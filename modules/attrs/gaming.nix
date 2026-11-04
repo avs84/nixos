@@ -35,10 +35,6 @@
 
       steamtinkerlaunch
 
-
-      lsfg-vk
-      lsfg-vk-ui
-      self.packages.${pkgs.system}.wow-launcher
     ];
 
     nix.settings = {
