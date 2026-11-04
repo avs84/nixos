@@ -5,6 +5,7 @@
       avsvmConfiguration
       system
       niri
+      flatpaks
       # desktop
       tools
       # gaming

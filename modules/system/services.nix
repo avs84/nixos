@@ -5,21 +5,6 @@
     imports = [inputs.nix-flatpak.nixosModules.nix-flatpak];
 
     services = {
-      flatpak = {
-        enable = true;
-        update.auto = {
-          enable = true;
-          onCalendar = "weekly";
-        };
-        remotes = [
-          { name = "flathub"; location = "https://dl.flathub.org/repo/flathub.flatpakrepo"; }
-          {
-          name = "nvidia-geforcenow";
-          location = "https://international.download.nvidia.com/GFNLinux/flatpak/geforcenow.flatpakrepo";
-        }];
-      #   packages = [
-      #     { appId = "com.nvidia.geforcenow"; origin = "nvidia-geforcenow"; }        ];
-      };
       printing.enable = true;
 
       power-profiles-daemon.enable = true;
