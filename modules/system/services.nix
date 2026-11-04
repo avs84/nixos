@@ -2,7 +2,7 @@
 
   flake.nixosModules.services = {pkgs, ...}:{
 
-    imports = inputs.nix-flatpak.nixosModules.nix-flatpak;
+    imports = [inputs.nix-flatpak.nixosModules.nix-flatpak];
 
     services = {
       flatpak = {
