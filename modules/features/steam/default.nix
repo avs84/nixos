@@ -15,15 +15,7 @@
       extraCompatPackages = with pkgs; [
         proton-ge-bin
       ];
-      package = unfreePkgs.steam.override {
-        extraEnv = {
-          LD_AUDIT = "${
-            inputs'.sls-steam.packages.sls-steam
-          }/library-inject.so:${
-            inputs'.sls-steam.packages.sls-steam
-          }/SLSsteam.so";
-        };
-      };
     };
-  });
+  };
+  );
 }
