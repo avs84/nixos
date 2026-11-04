@@ -1,4 +1,4 @@
-{moduleWithSystem, ...}: {
+{inputs, moduleWithSystem, ...}: {
   flake.nixosModules.steam = moduleWithSystem ({
 		pkgs,
     unfreePkgs,
