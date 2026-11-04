@@ -20,7 +20,7 @@
 
       # todo: fix
       text = ''
-        export WINEPREFIX="$HOME/Games/Wow"
+        export WINEPREFIX="$HOME/.wine-battlenet"
         export WINEARCH=win64
         export WINEDEBUG="-all"
         export DRI_PRIME=1
