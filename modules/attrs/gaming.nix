@@ -9,7 +9,9 @@
       steam
     ];
   in {
-    imports = modules;
+    imports = [modules
+      inputs.nix-flatpak.nixosModules.nix-flatpak
+    ];
     
     hardware.graphics.enable = lib.mkDefault true;
 
