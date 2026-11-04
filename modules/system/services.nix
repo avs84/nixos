@@ -11,10 +11,10 @@
           enable = true;
           onCalendar = "weekly";
         };
-        extraFlatpakRepos = {
-          geforcenow = {
-            url = "https://international.download.nvidia.com/GFNLinux/flatpak/geforcenow.flatpakrepo";
-          };
+        remotes = {
+          name = "nvidia-geforcenow";
+          location = "https://international.download.nvidia.com/GFNLinux/flatpak/geforcenow.flatpakrepo";
+        };
         };
       };
       printing.enable = true;
