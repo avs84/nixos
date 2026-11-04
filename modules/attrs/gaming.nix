@@ -44,7 +44,7 @@
     services.zerotierone.enable = true;
 
     services.flatpak.packages = [
-      "com.nvidia.geforcenow"
+      { origin = "nvidia-geforcenow"; appId = "com.nvidia.geforcenow"; }
     ];
     
     nix.settings = {
