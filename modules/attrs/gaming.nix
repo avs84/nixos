@@ -44,6 +44,7 @@
     services.zerotierone.enable = true;
 
     services.flatpak.packages = [
+      "org.freedesktop.Platform/x86_64/24.08"
       { origin = "nvidia-geforcenow"; appId = "com.nvidia.geforcenow"; }
     ];
     
