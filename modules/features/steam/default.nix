@@ -1,4 +1,4 @@
-{inputs, moduleWithSystem, ...}: {
+{moduleWithSystem, ...}: {
   flake.nixosModules.steam = moduleWithSystem ({
 		pkgs,
     unfreePkgs,
@@ -15,7 +15,7 @@
       extraCompatPackages = with pkgs; [
         proton-ge-bin
       ];
+      
     };
-  };
-  );
+  });
 }
