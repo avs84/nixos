@@ -8,7 +8,6 @@
   }: {
     # If buying isn't owning than piracy isn't stealing
     environment.systemPackages = [
-      inputs'.sls-steam.packages.default
     ];
     programs.steam = {
       enable = true;
