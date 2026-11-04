@@ -6,9 +6,9 @@
       system
       niri
       flatpaks
+      gaming
       # desktop
       tools
-      # gaming
       productivity
       hyprland
     ];
