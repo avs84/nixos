@@ -7,7 +7,7 @@
       addonFolder = "Interface/Addons";
     in {
 
-  imports = [inputs.battlenet-umu.nixosModules.battlenet-umu];
+  imports = [inputs.battlenet-umu.homeModules.default];
 
   programs.battlenet-umu = {
     enable = true;
