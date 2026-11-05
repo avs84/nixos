@@ -19,6 +19,7 @@
       fastfetch
       pcmanfm
       git
+      gparted
     ];
 
     # Install firefox.
