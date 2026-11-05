@@ -9,6 +9,8 @@
       tldr
     ];
 
+    programs.yazi.enable = true;
+
     # Applies to bash and fish
     environment.shellAliases = {
       ls = "eza -la --icons --git";

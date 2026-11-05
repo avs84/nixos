@@ -1,4 +1,4 @@
-{ ... }:{
+{ inputs, ... }:{
 
   flake.nixosModules.hyprland = {pkgs, ...}:{
 
@@ -16,5 +16,6 @@
     xwayland.enable = true;
   };
   };
+
 }
   

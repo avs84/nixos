@@ -20,6 +20,7 @@
 
       optimise.automatic = true;
 
+    
       # Setting nixpkgs.config.free = true isn't possible through a normal nixosModule,
       # because of how inheritance works with nixos exclusive objects
       # unfreePkgs = import inputs.nixpkgs {
