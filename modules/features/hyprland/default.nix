@@ -47,10 +47,6 @@
         hypridle
       ];
       
-      config = {
-        flags."--config" = "${configFile}";
-      };
-
       # lets programs.hyprland register the login session from this package
       passthru.providedSessions = [ "hyprland" ];
 
