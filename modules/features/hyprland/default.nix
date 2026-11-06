@@ -45,8 +45,9 @@
         hyprpaper
         rofi
         hypridle
-        noctalia
       ];
+
+      programs.noctalia.enable = true;
       
       # lets programs.hyprland register the login session from this package
       passthru.providedSessions = [ "hyprland" ];
