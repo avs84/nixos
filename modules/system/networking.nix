@@ -1,6 +1,6 @@
 {...}: {
   # Define flake part nixosModule "networking"
-  flake.nixosModules.networking = {...}: {
+  flake.nixosModules.networking = {pkgs, ...}: {
     # Normal nix code
     networking = {
       # Enable networkManager
