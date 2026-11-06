@@ -29,10 +29,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
      
     # Catppuccin theme
-    catppuccin = {
-      url = "github:catppuccin/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    catppuccin.url = "github:catppuccin/nix";
 
     # #cachyos kernel
     # nix-cachyos-kernel = {
