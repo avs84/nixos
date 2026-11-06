@@ -19,7 +19,7 @@
       fastfetch
       pcmanfm
       git
-      gparted
+      claude-code
     ];
 
     # Install firefox.

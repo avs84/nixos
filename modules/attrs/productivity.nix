@@ -15,6 +15,8 @@
       protonmail-desktop
       capacities
       onlyoffice-desktopeditors
+      claude-code
+
     ];
 
   };
