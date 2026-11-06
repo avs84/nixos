@@ -45,7 +45,7 @@
         hyprpaper
         rofi
         hypridle
-        lib.getExe self'.packages.myNoctalia
+        noctalia
       ];
       
       # lets programs.hyprland register the login session from this package
