@@ -3,8 +3,8 @@
   self,
   ...
 }: {
-  flake.nixosModules.davinci = moduleWithSystem ({self', ...}: {
-    environment.systemPackages = with self'.packages; [
+  flake.nixosModules.davinci = moduleWithSystem ({self', pkgs, ...}: {
+    environment.systemPackages = with pkgs; [
       davinci-resolve
     ];
   });
