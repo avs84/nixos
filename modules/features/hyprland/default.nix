@@ -8,7 +8,6 @@
       reloadWaybar  = "pkill waybar; ${lib.getExe pkgs.waybar} &";
       waybar        = lib.getExe pkgs.waybar;
       hyprpaper     = lib.getExe pkgs.hyprpaper;
-      noctalia = lib.getExe self'.packages.myNoctalia;
     in
   
   {
