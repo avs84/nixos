@@ -16,6 +16,7 @@
       capacities
       onlyoffice-desktopeditors
       claude-code
+      signal-desktop
 
     ];
 

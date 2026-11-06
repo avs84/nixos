@@ -9,7 +9,7 @@
 
       power-profiles-daemon.enable = true;
       upower.enable = true;
-
+      teamviewer.enable = true;
     };
 
     hardware.bluetooth.enable = true;

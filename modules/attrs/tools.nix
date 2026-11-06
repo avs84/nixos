@@ -7,6 +7,8 @@
       myNeovim
       fish
       cli
+      teamviewer
+      git
     ];
   in {
     imports = modules;
@@ -18,8 +20,6 @@
       git
       fastfetch
       pcmanfm
-      git
-      claude-code
     ];
 
     # Install firefox.

@@ -17,7 +17,9 @@ flake.nixosModules.flatpaks = { pkgs, ...}:{
         location = "https://international.download.nvidia.com/GFNLinux/flatpak/geforcenow.flatpakrepo";
       }];
       packages = [
-        { appId = "com.nvidia.geforcenow"; origin = "nvidia-geforcenow"; }        ];
+        { appId = "com.nvidia.geforcenow"; origin = "nvidia-geforcenow"; }
+        { appId = "io.scottlabs.reManager"; origin = "flathub"; }
+      ];
     };
   };
 }

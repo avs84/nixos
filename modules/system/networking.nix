@@ -11,6 +11,10 @@
       
     };
 
+    environment.systemPackages = with pkgs; [
+      proton-vpn
+    ];
+
     # Disable "wait-online" target, makes connecting to network
     # async on boot
     systemd.services.NetworkManager-wait-online.enable = false;
