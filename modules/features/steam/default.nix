@@ -6,7 +6,7 @@
     lib,
     ...
   }: {
-    # If buying isn't owning than piracy isn't stealing
+
     environment.systemPackages = [
     ];
     programs.steam = {
