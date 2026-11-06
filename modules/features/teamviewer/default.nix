@@ -4,7 +4,9 @@
     environment.systemPackages = with pkgs; [
       teamviewer
     ];
+  
+    services.teamviewer.enable = true;
+
   };
 
-  services.teamviewer.enable = true;
 }
