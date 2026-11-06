@@ -2,6 +2,7 @@
   # Define flake part nixosModule "bootloader" and pass in pkgs
   flake.nixosModules.bootloader = {pkgs, ...}: {
     
+    nixpkgs.overlays = [ nix-cachyos-kernel.overlays.pinned ];
     boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
 
     # Use the GRUB 2 boot loader.
