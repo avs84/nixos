@@ -31,7 +31,7 @@
     # Catppuccin theme
     catppuccin.url = "github:catppuccin/nix";
 
-    # #cachyos kernel
+    # Cachyos kernel
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
   };
 

@@ -4,22 +4,22 @@
   ...
 }:
 {
-  imports = [ inputs.catppuccin.nixosModules.catppuccin ];
+  # imports = [ inputs.catppuccin.nixosModules.catppuccin ];
 
-  catppuccin = {
-    enable = true;
-    autoEnable = true;
-    cache.enable = false;
-    flavor = "mocha";
-    accent = "mauve";
+  # catppuccin = {
+  #   enable = true;
+  #   autoEnable = true;
+  #   cache.enable = false;
+  #   flavor = "mocha";
+  #   accent = "mauve";
 
-    limine.enable = true;
-    sddm.enable = true;
-    tty.enable = true;
-  };
+  #   limine.enable = true;
+  #   sddm.enable = true;
+  #   tty.enable = true;
+  # };
 
-  environment.systemPackages = with pkgs; [
-    catppuccin-cursors.mochaMauve
-    catppuccin-qt5ct
-  ];
+  # environment.systemPackages = with pkgs; [
+  #   catppuccin-cursors.mochaMauve
+  #   catppuccin-qt5ct
+  # ];
 }
