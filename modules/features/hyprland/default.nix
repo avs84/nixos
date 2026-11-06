@@ -49,8 +49,8 @@
       
       config = {
         flags."--config" = "${config.luaConfig}";
-      }
-      
+      };
+
       # lets programs.hyprland register the login session from this package
       passthru.providedSessions = [ "hyprland" ];
 
