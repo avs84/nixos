@@ -8,10 +8,14 @@
       reloadWaybar  = "pkill waybar; ${lib.getExe pkgs.waybar} &";
       waybar        = lib.getExe pkgs.waybar;
       hyprpaper     = lib.getExe pkgs.hyprpaper;
+      moduules = with self.nixosModules; [
+        myNoctalia
+      ];
     in
   
   {
-        
+    imports = modules;
+     
     # GTK_THEME / GTK_ICON_THEME in your Lua need these installed
     environment.systemPackages = with pkgs; [
       tokyonight-gtk-theme
@@ -25,6 +29,9 @@
       withUWSM = true;
       xwayland.enable = true;
     };
+
+
+
   };
 
   perSystem = { pkgs, lib, self', ... }:
@@ -46,8 +53,6 @@
         rofi
         hypridle
       ];
-
-      programs.noctalia.enable = true;
       
       # lets programs.hyprland register the login session from this package
       passthru.providedSessions = [ "hyprland" ];
