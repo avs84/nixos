@@ -9,6 +9,6 @@
     ];
   });
   perSystem = {inputs', ...}: {
-    packages.davinci-resolve = inputs'.davinci.packages.default;
+    packages.davinci-resolve = self'.davinci.packages.default;
   };
 }
