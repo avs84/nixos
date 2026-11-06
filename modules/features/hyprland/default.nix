@@ -8,13 +8,9 @@
       reloadWaybar  = "pkill waybar; ${lib.getExe pkgs.waybar} &";
       waybar        = lib.getExe pkgs.waybar;
       hyprpaper     = lib.getExe pkgs.hyprpaper;
-      modules = with self.nixosModules; [
-        self.packages.myNoctalia
-      ];
     in
   
   {
-    imports = modules;
 
     # GTK_THEME / GTK_ICON_THEME in your Lua need these installed
     environment.systemPackages = with pkgs; [
@@ -30,7 +26,7 @@
       xwayland.enable = true;
     };
 
-
+    programs.noctalia.enable = true;
 
   };
 
