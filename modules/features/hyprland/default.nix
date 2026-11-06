@@ -48,7 +48,7 @@
       ];
       
       config = {
-        flags."--config" = "${config.luaConfig}";
+        flags."--config" = "${configFile}";
       };
 
       # lets programs.hyprland register the login session from this package
