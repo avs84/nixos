@@ -34,6 +34,10 @@
     packages.myHyprland = inputs.wrappers.wrappers.hyprland.wrap {
       inherit pkgs;
 
+      imports = [
+        noctalia
+      ];
+
       # your original Lua file; the module wires it up via --config
       configFile = ./hyprland.lua;
 
