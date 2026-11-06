@@ -1,6 +1,6 @@
 { self, inputs, ... }:{
 
-  flake.nixosModules.hyprland = {lib, pkgs, inputs, ...}:
+  flake.nixosModules.hyprland = {lib, pkgs, ...}:
    let
       terminal      = lib.getExe pkgs.foot;
       fileManager   = lib.getExe pkgs.pcmanfm;
@@ -8,6 +8,7 @@
       reloadWaybar  = "pkill waybar; ${lib.getExe pkgs.waybar} &";
       waybar        = lib.getExe pkgs.waybar;
       hyprpaper     = lib.getExe pkgs.hyprpaper;
+      noctalia = lib.getExe self'.packages.myNoctalia;
     in
   
   {
@@ -16,7 +17,6 @@
     environment.systemPackages = with pkgs; [
       tokyonight-gtk-theme
       adwaita-icon-theme
-      inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     # enable Hyprland
@@ -31,9 +31,7 @@
   };
 
   perSystem = { pkgs, lib, self', ... }:
-  let
-    noctalia = lib.getExe self'.packages.myNoctalia;
-  in {
+  {
     packages.myHyprland = inputs.wrappers.wrappers.hyprland.wrap {
       inherit pkgs;
 
