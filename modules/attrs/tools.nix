@@ -31,6 +31,6 @@
         nrs = "sudo nixos-rebuild switch --flake ~/.#avs-vm";
         nrs-vm = "nixos-rebuild switch --flake .#avs-vm --target-host avs@192.168.122.50 --sudo --ask-sudo-password";
       };
-    }
+    };
   };
 }
