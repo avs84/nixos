@@ -1,6 +1,6 @@
 { self, inputs, ... }:{
 
-  flake.nixosModules.hyprland = {lib, pkgs, ...}:
+  flake.nixosModules.hyprland = {lib, pkgs, inputs, ...}:
    let
       terminal      = lib.getExe pkgs.foot;
       fileManager   = lib.getExe pkgs.pcmanfm;
