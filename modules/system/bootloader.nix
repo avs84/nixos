@@ -2,7 +2,7 @@
   # Define flake part nixosModule "bootloader" and pass in pkgs
   flake.nixosModules.bootloader = {pkgs, ...}: {
     
-    boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
+    boot.kernelPackages = pkgs.nix-cachyos-kernel.linuxPackages-cachyos-latest;
 
     # Use the GRUB 2 boot loader.
     boot.loader.grub.enable = true;
