@@ -26,8 +26,12 @@
       xwayland.enable = true;
     };
 
-    programs.noctalia.enable = true;
+    programs.noctalia = {
+      enable = true;
 
+      # Enables NetworkManager, Bluetooth, UPower, and a power profile service.
+      recommendedServices.enable = true;
+    };
   };
 
   perSystem = { pkgs, lib, self', ... }:
