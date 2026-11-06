@@ -9,7 +9,7 @@
       waybar        = lib.getExe pkgs.waybar;
       hyprpaper     = lib.getExe pkgs.hyprpaper;
       modules = with self.nixosModules; [
-        myNoctalia
+        noctalia
       ];
     in
   
