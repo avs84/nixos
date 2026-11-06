@@ -1,4 +1,4 @@
-{ ... }:{
+{ self, ... }:{
 
   flake.nixosModules.productivity = {pkgs, ...}:
   let 
@@ -17,4 +17,5 @@
       onlyoffice-desktopeditors
     ];
 
-  };}
+  };
+}
