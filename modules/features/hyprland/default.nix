@@ -9,7 +9,7 @@
       waybar        = lib.getExe pkgs.waybar;
       hyprpaper     = lib.getExe pkgs.hyprpaper;
       modules = with self.nixosModules; [
-        self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia
+        self.packages.myNoctalia
       ];
     in
   
