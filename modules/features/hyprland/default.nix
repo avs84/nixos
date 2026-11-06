@@ -34,10 +34,6 @@
     packages.myHyprland = inputs.wrappers.wrappers.hyprland.wrap {
       inherit pkgs;
 
-      modules = with self'.nixosModules; [
-        noctalia
-      ];
-
       # your original Lua file; the module wires it up via --config
       configFile = ./hyprland.lua;
 
@@ -49,6 +45,7 @@
         hyprpaper
         rofi
         hypridle
+        lib.getExe self'.packages.myNoctalia
       ];
       
       # lets programs.hyprland register the login session from this package
