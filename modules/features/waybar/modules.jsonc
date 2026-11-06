@@ -72,7 +72,7 @@
                               "weekdays":   "<span color='#fab387'><b>{}</b></span>",
                               "today":      "<span color='#cba6f7'><b><u>{}</u></b></span>"
                               }
-                    },
+                    }
     }
 }
 
