@@ -29,6 +29,7 @@
       r2modman
 
       heroic
+      lutris
 
       er-patcher
       bottles

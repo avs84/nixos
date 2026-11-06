@@ -5,7 +5,7 @@
     modules = with self.nixosModules; [
       # Add your modules here
       davinci
-      bambu-studio
+      # bambu-studio
     ];
   in {
     imports = modules;
