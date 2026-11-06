@@ -16,6 +16,7 @@
     environment.systemPackages = with pkgs; [
       tokyonight-gtk-theme
       adwaita-icon-theme
+      inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
 
     # enable Hyprland
@@ -26,12 +27,7 @@
       xwayland.enable = true;
     };
 
-    programs.noctalia = {
-      enable = true;
-
-      # Enables NetworkManager, Bluetooth, UPower, and a power profile service.
-      recommendedServices.enable = true;
-    };
+  
   };
 
   perSystem = { pkgs, lib, self', ... }:
