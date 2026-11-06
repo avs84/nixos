@@ -11,10 +11,7 @@
     in
   
   {
-     imports =[
-      inputs.noctalia-greeter.nixosModules.default
-    ];
-    
+        
     # GTK_THEME / GTK_ICON_THEME in your Lua need these installed
     environment.systemPackages = with pkgs; [
       tokyonight-gtk-theme
