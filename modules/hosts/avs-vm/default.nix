@@ -7,7 +7,6 @@
       niri
       flatpaks
       # gaming
-      # desktop
       tools
       productivity
       hyprland
